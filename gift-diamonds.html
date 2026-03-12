@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gift Diamonds – Premium fine jewellery crafted for timeless elegance. Explore rings, necklaces, bridal collections & more. BIS Hallmarked. Shop online or visit us.">
+<title>Gift Diamonds 💎 — Fine Jewellery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ivory: #fdf8f2;
+  --ivory-deep: #f7efe5;
+  --blush: #f8d7da;
+  --blush-deep: #f0b8be;
+  --rose-gold: #e8b4b8;
+  --rose-gold-dark: #c9848a;
+  --sky: #dff6ff;
+  --sky-deep: #b8eaff;
+  --champagne: #f7efe5;
+  --champagne-gold: #d4a96a;
+  --gold: #c9954a;
+  --charcoal: #2d2d2d;
+  --soft-grey: #777;
+  --light-grey: #aaa;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 24px rgba(180,120,120,0.10);
+  --shadow-card: 0 8px 40px rgba(180,120,120,0.12);
+  --shadow-hover: 0 16px 56px rgba(180,120,120,0.20);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Poppins', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── ANNOUNCEMENT ── */
+.announcement {
+  background: linear-gradient(90deg, var(--rose-gold), var(--blush-deep), var(--rose-gold));
+  background-size: 200% 100%;
+  animation: shimmerBg 4s ease infinite;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #5a2d32;
+  text-transform: uppercase;
+}
+@keyframes shimmerBg {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.announcement-inner {
+  display: flex; justify-content: center; gap: 40px;
+  flex-wrap: wrap;
+}
+.ann-item { white-space: nowrap; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 900;
+  background: rgba(253,248,242,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232,180,184,0.25);
+  padding: 0 40px;
+  box-shadow: 0 2px 20px rgba(180,120,120,0.08);
+  transition: box-shadow 0.3s;
+}
+.nav-inner {
+  max-width: 1300px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.logo-icon {
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--champagne-gold), var(--rose-gold-dark));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 14px rgba(201,148,74,0.35);
+}
+.logo-text {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.logo-text span { color: var(--rose-gold-dark); }
+.logo-sub {
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--soft-grey);
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex; gap: 32px; list-style: none;
+}
+.nav-links a {
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--rose-gold-dark);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover { color: var(--rose-gold-dark); }
+.nav-links a:hover::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--rose-gold-dark), #a05660);
+  color: white;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border: none; border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 16px rgba(201,132,138,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,132,138,0.5); }
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--charcoal); border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 92vh;
+  background: linear-gradient(135deg, #fdf8f2 0%, #fbeee8 35%, #f8dfe4 65%, #f0e8f5 100%);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding: 60px 40px;
+}
+.hero-bubbles {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.bubble {
+  position: absolute; border-radius: 50%;
+  animation: floatBubble 8s ease-in-out infinite;
+}
+.b1 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(232,180,184,0.25), transparent); top: -80px; right: 10%; }
+.b2 { width: 200px; height: 200px; background: radial-gradient(circle, rgba(223,246,255,0.5), transparent); bottom: 10%; left: 5%; animation-delay: -3s; }
+.b3 { width: 150px; height: 150px; background: radial-gradient(circle, rgba(247,239,229,0.8), transparent); top: 30%; right: 30%; animation-delay: -5s; }
+@keyframes floatBubble {
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+.hero-inner {
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+  position: relative; z-index: 2; width: 100%;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white;
+  border: 1px solid var(--rose-gold);
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rose-gold-dark);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-soft);
+  animation: fadeSlideUp 0.8s ease both;
+}
+.hero-badge::before { content: '✦'; font-size: 0.7rem; }
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  animation: fadeSlideUp 0.8s ease 0.15s both;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--rose-gold-dark);
+  display: block;
+}
+.hero-title .highlight {
+  font-style: italic; font-weight: 400;
+  color: var(--champagne-gold);
+}
+.hero-sub {
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--soft-grey);
+  max-width: 440px;
+  margin-bottom: 40px;
+  animation: fadeSlideUp 0.8s ease 0.3s both;
+}
+.hero-ctas {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  animation: fadeSlideUp 0.8s ease 0.45s both;
+}
+.btn-rose {
+  padding: 15px 36px;
+  background: linear-gradient(135deg, var(--rose-gold-dark), #a05660);
+  color: white;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 6px 24px rgba(201,132,138,0.45);
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: none; cursor: pointer;
+}
+.btn-rose:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(201,132,138,0.55); }
+.btn-outline {
+  padding: 14px 36px;
+  background: transparent;
+  color: var(--rose-gold-dark);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid var(--rose-gold);
+  transition: background 0.25s, transform 0.25s;
+  cursor: pointer;
+}
+.btn-outline:hover { background: var(--blush); transform: translateY(-3px); }
+.hero-stats {
+  display: flex; gap: 36px; margin-top: 48px;
+  animation: fadeSlideUp 0.8s ease 0.6s both;
+}
+.stat { text-align: center; }
+.stat-n {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--champagne-gold);
+  line-height: 1;
+}
+.stat-l {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--soft-grey);
+  margin-top: 4px;
+}
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeSlideUp 0.8s ease 0.2s both;
+  position: relative;
+}
+.hero-card {
+  width: 360px;
+  background: white;
+  border-radius: 28px;
+  box-shadow: var(--shadow-hover);
+  overflow: hidden;
+  position: relative;
+}
+.hero-card-img {
+  height: 320px;
+  background: linear-gradient(135deg, #fbeee8, #f5d5da, #e8c0c5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-card-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.3));
+}
+.hero-card-info { padding: 24px; }
+.hero-card-tag {
+  font-size: 0.6rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--rose-gold-dark); margin-bottom: 8px;
+}
+.hero-card-name {
+  font-family: var(--serif); font-size: 1.2rem;
+  font-weight: 600; color: var(--charcoal); margin-bottom: 12px;
+}
+.hero-card-price {
+  display: flex; align-items: center;
+  justify-content: space-between;
+}
+.price-main { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--champagne-gold); }
+.price-old { font-size: 0.8rem; color: var(--light-grey); text-decoration: line-through; margin-left: 8px; }
+.btn-cart {
+  padding: 10px 20px; background: var(--blush);
+  border: none; border-radius: 50px;
+  font-size: 0.7rem; font-weight: 500;
+  color: var(--rose-gold-dark); cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-cart:hover { background: var(--rose-gold); transform: scale(1.05); }
+.hero-float-badge {
+  position: absolute; top: 20px; right: -10px;
+  background: linear-gradient(135deg, var(--champagne-gold), #b8782a);
+  color: white; padding: 8px 18px;
+  border-radius: 50px 0 0 50px;
+  font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 16px rgba(201,149,74,0.4);
+}
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── MARQUEE ── */
+.marquee-bar {
+  background: linear-gradient(90deg, var(--blush), var(--rose-gold), var(--blush));
+  padding: 14px 0; overflow: hidden;
+  border-top: 1px solid rgba(232,180,184,0.4);
+  border-bottom: 1px solid rgba(232,180,184,0.4);
+}
+.marquee-track {
+  display: flex; gap: 0;
+  animation: marqueeScroll 25s linear infinite;
+  white-space: nowrap;
+}
+@keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.m-item {
+  display: inline-flex; align-items: center; gap: 28px;
+  flex-shrink: 0;
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #6a2d35; padding: 0 28px;
+}
+.m-dot { font-size: 1rem; color: var(--rose-gold-dark); }
+
+/* ── SECTIONS ── */
+.section-wrap { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+.section-pad { padding: 100px 0; }
+.section-pad-sm { padding: 70px 0; }
+.text-center { text-align: center; }
+.section-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--rose-gold-dark); margin-bottom: 14px;
+}
+.section-eyebrow::before, .section-eyebrow::after {
+  content: ''; display: block;
+  width: 24px; height: 1px; background: var(--rose-gold);
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700; line-height: 1.15;
+  color: var(--charcoal); margin-bottom: 16px;
+}
+.section-title em { font-style: italic; color: var(--rose-gold-dark); }
+.section-desc {
+  font-size: 0.88rem; font-weight: 300;
+  line-height: 1.9; color: var(--soft-grey);
+  max-width: 520px; margin: 0 auto;
+}
+
+/* ── TRUST BAR ── */
+.trust-bar { background: white; padding: 0; }
+.trust-inner {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--blush);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.trust-item {
+  background: white; padding: 32px 24px;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 12px;
+  transition: background 0.3s;
+}
+.trust-item:hover { background: #fffafa; }
+.trust-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--blush), var(--rose-gold));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 16px rgba(232,180,184,0.5);
+}
+.trust-title {
+  font-family: var(--serif); font-size: 0.95rem;
+  font-weight: 600; color: var(--charcoal);
+}
+.trust-sub { font-size: 0.72rem; font-weight: 300; color: var(--soft-grey); line-height: 1.6; }
+
+/* ── CATEGORIES ── */
+.categories { background: var(--ivory); }
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px; margin-top: 52px;
+}
+.cat-card {
+  position: relative; overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: white;
+}
+.cat-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+.cat-img {
+  aspect-ratio: 3/4;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4.5rem;
+  position: relative; overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.cat-card:hover .cat-img { transform: scale(1.06); }
+.cat1 .cat-img { background: linear-gradient(150deg, #fde8ec, #f5c5cc); }
+.cat2 .cat-img { background: linear-gradient(150deg, #fdf5e0, #f0dbb5); }
+.cat3 .cat-img { background: linear-gradient(150deg, #e8f5fb, #c5e0f5); }
+.cat4 .cat-img { background: linear-gradient(150deg, #f5e8fd, #d5b8f0); }
+.cat5 .cat-img { background: linear-gradient(150deg, #e8fdf0, #b5f0cc); }
+.cat-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(45,45,45,0.75) 0%, transparent 55%);
+  transition: opacity 0.35s;
+}
+.cat-card:hover .cat-overlay { opacity: 0.85; }
+.cat-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px 16px;
+}
+.cat-name {
+  font-family: var(--serif); font-size: 1.05rem;
+  font-weight: 600; color: white; margin-bottom: 3px;
+}
+.cat-count { font-size: 0.6rem; font-weight: 400; color: rgba(255,255,255,0.75); letter-spacing: 0.1em; }
+.cat-arrow {
+  position: absolute; bottom: 18px; right: 16px;
+  width: 32px; height: 32px;
+  background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; color: var(--rose-gold-dark);
+  opacity: 0; transform: scale(0.7);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.cat-card:hover .cat-arrow { opacity: 1; transform: scale(1); }
+
+/* ── PRODUCTS ── */
+.products-bg { background: linear-gradient(180deg, var(--ivory) 0%, white 100%); }
+.products-tabs {
+  display: flex; justify-content: center;
+  gap: 8px; flex-wrap: wrap; margin: 36px 0 52px;
+}
+.tab-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--rose-gold);
+  background: transparent;
+  color: var(--soft-grey); cursor: pointer;
+  transition: all 0.25s;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: linear-gradient(135deg, var(--rose-gold-dark), #a05660);
+  color: white; border-color: transparent;
+  box-shadow: 0 4px 16px rgba(201,132,138,0.4);
+}
+.products-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.p-card {
+  background: white; border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-card);
+  transition: transform 0.35s, box-shadow 0.35s;
+  position: relative;
+}
+.p-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
+.p-img {
+  aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem; position: relative; overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.p-card:hover .p-img { transform: scale(1.07); }
+.pi1 { background: linear-gradient(135deg, #fde8ec, #f5c0c8); }
+.pi2 { background: linear-gradient(135deg, #fdf5e0, #f0d8a8); }
+.pi3 { background: linear-gradient(135deg, #e8f5fb, #bce0f5); }
+.pi4 { background: linear-gradient(135deg, #f5e8fd, #d8baf0); }
+.pi5 { background: linear-gradient(135deg, #fde8ec, #f8c8ce); }
+.pi6 { background: linear-gradient(135deg, #e8fdf0, #b8f0cc); }
+.pi7 { background: linear-gradient(135deg, #fdf5e0, #edd8a0); }
+.pi8 { background: linear-gradient(135deg, #fde8ec, #f0b8c0); }
+.p-badge {
+  position: absolute; top: 14px; left: 14px;
+  padding: 5px 12px; border-radius: 50px;
+  font-size: 0.58rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.badge-new { background: var(--sky); color: #1a7aaa; }
+.badge-sale { background: var(--blush); color: #8a2d35; }
+.badge-best { background: #f0fde8; color: #2d7a35; }
+.p-wish {
+  position: absolute; top: 14px; right: 14px;
+  width: 34px; height: 34px;
+  background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, color 0.2s;
+  border: none; color: var(--light-grey);
+}
+.p-wish:hover { transform: scale(1.15); color: #e05a6a; }
+.p-info { padding: 20px; }
+.p-mat { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose-gold-dark); margin-bottom: 6px; }
+.p-name { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--charcoal); margin-bottom: 14px; line-height: 1.3; }
+.p-price-row { display: flex; align-items: center; justify-content: space-between; }
+.p-price { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--champagne-gold); }
+.p-old { font-size: 0.75rem; color: var(--light-grey); text-decoration: line-through; margin-left: 6px; }
+.p-enquire {
+  padding: 9px 18px;
+  background: var(--blush);
+  border: none; border-radius: 50px;
+  font-size: 0.68rem; font-weight: 500;
+  color: var(--rose-gold-dark); cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  white-space: nowrap;
+}
+.p-enquire:hover { background: var(--rose-gold); transform: scale(1.04); }
+
+/* ── BRIDAL ── */
+.bridal-section {
+  background: linear-gradient(135deg, #fdf8f2, #fbe8ee, #f5dde5);
+  position: relative; overflow: hidden;
+}
+.bridal-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.bridal-visual {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.bridal-ring-bg {
+  width: 360px; height: 360px; border-radius: 50%;
+  background: linear-gradient(135deg, #fde8f0, #f5c5d0, #e8a0b0);
+  box-shadow: 0 0 80px rgba(232,160,176,0.5), inset 0 0 60px rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9rem;
+  animation: gentleFloat 5s ease-in-out infinite;
+  position: relative;
+}
+@keyframes gentleFloat {
+  0%,100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-16px) rotate(2deg); }
+}
+.bridal-float-cards {
+  position: absolute;
+}
+.bridal-mini-card {
+  position: absolute;
+  background: white; border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: var(--shadow-hover);
+  min-width: 140px;
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+.bc1 { top: -20px; right: -60px; animation-delay: -1s; }
+.bc2 { bottom: -10px; left: -60px; animation-delay: -2.5s; }
+.bmc-icon { font-size: 1.6rem; margin-bottom: 6px; }
+.bmc-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft-grey); }
+.bmc-val { font-family: var(--serif); font-size: 0.95rem; font-weight: 600; color: var(--charcoal); }
+.bridal-text {}
+.bridal-list { list-style: none; margin: 28px 0; display: flex; flex-direction: column; gap: 14px; }
+.bridal-list li {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 0.85rem; font-weight: 300; color: var(--soft-grey);
+}
+.bridal-list li::before {
+  content: '💎'; font-size: 0.9rem; flex-shrink: 0;
+}
+
+/* ── CUSTOM ORDER ── */
+.custom-section { background: white; }
+.custom-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.custom-form-wrap {
+  background: var(--ivory);
+  border-radius: 24px; padding: 48px 40px;
+  box-shadow: var(--shadow-card);
+}
+.custom-form-wrap h3 {
+  font-family: var(--serif); font-size: 1.6rem;
+  font-weight: 700; color: var(--charcoal); margin-bottom: 8px;
+}
+.custom-form-wrap p {
+  font-size: 0.82rem; color: var(--soft-grey);
+  margin-bottom: 28px; line-height: 1.8;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 13px 18px;
+  border: 1.5px solid #e8d5d8;
+  border-radius: var(--radius-sm);
+  font-family: var(--sans); font-size: 0.8rem;
+  font-weight: 300; color: var(--charcoal);
+  background: white; outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--rose-gold-dark);
+  box-shadow: 0 0 0 3px rgba(201,132,138,0.12);
+}
+.form-textarea { resize: vertical; min-height: 90px; margin-bottom: 14px; }
+.form-full { margin-bottom: 14px; }
+.btn-submit {
+  width: 100%; padding: 15px;
+  background: linear-gradient(135deg, var(--rose-gold-dark), #a05660);
+  color: white; border: none;
+  border-radius: var(--radius-sm); font-family: var(--sans);
+  font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.08em; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(201,132,138,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(201,132,138,0.55); }
+.custom-info {}
+.custom-steps { margin: 32px 0; display: flex; flex-direction: column; gap: 24px; }
+.custom-step { display: flex; gap: 20px; align-items: flex-start; }
+.step-num {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--rose-gold), var(--blush-deep));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.1rem; font-weight: 700;
+  color: var(--rose-gold-dark);
+}
+.step-body h4 { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+.step-body p { font-size: 0.78rem; font-weight: 300; color: var(--soft-grey); line-height: 1.7; }
+
+/* ── TESTIMONIALS ── */
+.testi-section { background: linear-gradient(180deg, #fdf8f2, white); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+.t-card {
+  background: white; border-radius: var(--radius);
+  padding: 36px 30px; box-shadow: var(--shadow-card);
+  position: relative; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.t-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.t-card::before {
+  content: '"'; position: absolute; top: 16px; right: 24px;
+  font-family: var(--serif); font-size: 6rem;
+  color: rgba(232,180,184,0.2); line-height: 1; font-style: italic;
+}
+.t-stars { color: #f4b942; font-size: 0.85rem; letter-spacing: 0.1em; margin-bottom: 18px; }
+.t-text { font-family: var(--serif); font-style: italic; font-size: 0.95rem; font-weight: 400; line-height: 1.85; color: var(--charcoal); margin-bottom: 24px; opacity: 0.85; }
+.t-author { display: flex; align-items: center; gap: 14px; }
+.t-avatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blush), var(--rose-gold));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.1rem; font-weight: 700;
+  color: var(--rose-gold-dark);
+  border: 2px solid var(--rose-gold);
+  flex-shrink: 0;
+}
+.t-name { font-size: 0.8rem; font-weight: 600; color: var(--charcoal); margin-bottom: 2px; }
+.t-loc { font-size: 0.68rem; font-weight: 300; color: var(--soft-grey); }
+.t-verified { font-size: 0.62rem; font-weight: 500; color: #2a9d5c; margin-top: 2px; }
+
+/* ── TRUST CREDS ── */
+.creds-section { background: var(--champagne); }
+.creds-inner {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px; margin-top: 52px;
+}
+.cred-card {
+  background: white; border-radius: var(--radius);
+  padding: 36px 24px; text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cred-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+.cred-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.cred-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; }
+.cred-desc { font-size: 0.75rem; font-weight: 300; color: var(--soft-grey); line-height: 1.8; }
+.cred-badge {
+  display: inline-block; margin-top: 14px; padding: 5px 14px;
+  background: var(--blush); border-radius: 50px;
+  font-size: 0.6rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--rose-gold-dark);
+}
+
+/* ── APPOINTMENT ── */
+.appt-section {
+  background: linear-gradient(135deg, #fdf8f2, #fbe8ee);
+  text-align: center;
+}
+.appt-inner { max-width: 680px; margin: 0 auto; }
+.appt-icon { font-size: 3rem; margin-bottom: 20px; }
+.appt-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+
+/* ── LOCATION ── */
+.location-section { background: white; }
+.location-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: start;
+}
+.map-placeholder {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: linear-gradient(135deg, #e8f5fb, #dff6ff);
+  height: 340px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; border: 2px dashed var(--rose-gold);
+}
+.map-placeholder .map-icon { font-size: 3rem; }
+.map-placeholder p { font-size: 0.82rem; color: var(--soft-grey); text-align: center; padding: 0 20px; }
+.map-placeholder a {
+  padding: 12px 28px; background: var(--sky);
+  border-radius: 50px; font-size: 0.75rem;
+  font-weight: 500; color: #1a7aaa; text-decoration: none;
+  transition: background 0.25s;
+}
+.map-placeholder a:hover { background: var(--sky-deep); }
+.location-info { padding: 10px 0; }
+.location-info h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; color: var(--charcoal); margin-bottom: 20px; }
+.l-row { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; }
+.l-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.l-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rose-gold-dark); margin-bottom: 4px; }
+.l-val { font-size: 0.82rem; font-weight: 300; color: var(--soft-grey); line-height: 1.7; }
+.hours-grid {
+  background: var(--ivory); border-radius: var(--radius-sm);
+  padding: 20px; margin-top: 28px;
+}
+.hours-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose-gold-dark); margin-bottom: 12px; }
+.hour-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--blush); font-size: 0.78rem; }
+.hour-row:last-child { border: none; }
+.day { font-weight: 400; color: var(--charcoal); }
+.time { color: var(--soft-grey); font-weight: 300; }
+
+/* ── NEWSLETTER ── */
+.nl-section {
+  background: linear-gradient(135deg, var(--rose-gold-dark) 0%, #a05660 50%, #7a3540 100%);
+  padding: 80px 40px; text-align: center; position: relative; overflow: hidden;
+}
+.nl-section::before {
+  content: '💎';
+  position: absolute; font-size: 15rem; opacity: 0.04;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.nl-section h2 { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: white; margin-bottom: 12px; }
+.nl-section p { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
+.nl-form-wrap { display: flex; justify-content: center; gap: 0; max-width: 500px; margin: 0 auto; }
+.nl-input {
+  flex: 1; padding: 15px 22px;
+  border: none; border-radius: 50px 0 0 50px;
+  font-family: var(--sans); font-size: 0.82rem;
+  outline: none; color: var(--charcoal);
+  background: white;
+}
+.nl-btn {
+  padding: 15px 28px;
+  background: var(--champagne-gold);
+  color: white; border: none;
+  border-radius: 0 50px 50px 0;
+  font-family: var(--sans); font-size: 0.75rem;
+  font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; cursor: pointer;
+  transition: background 0.25s;
+  white-space: nowrap;
+}
+.nl-btn:hover { background: var(--gold); }
+
+/* ── FOOTER ── */
+footer {
+  background: #1e1212;
+  padding: 72px 40px 32px;
+}
+.footer-inner { max-width: 1300px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 60px; margin-bottom: 60px;
+}
+.footer-brand .logo-text { color: white; font-size: 1.6rem; }
+.footer-brand .logo-sub { color: rgba(255,255,255,0.4); }
+.footer-tagline {
+  font-size: 0.78rem; font-weight: 300; color: rgba(255,255,255,0.5);
+  line-height: 1.9; margin: 18px 0 24px;
+}
+.footer-socials { display: flex; gap: 10px; }
+.social-link {
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.social-link:hover { background: var(--rose-gold-dark); color: white; border-color: var(--rose-gold-dark); }
+.footer-col h4 {
+  font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--rose-gold); margin-bottom: 20px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.footer-col ul a { font-size: 0.78rem; font-weight: 300; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.25s; }
+.footer-col ul a:hover { color: var(--rose-gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 28px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.3); font-weight: 300; }
+.footer-legal { display: flex; gap: 24px; }
+.footer-legal a { font-size: 0.65rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.25s; }
+.footer-legal a:hover { color: var(--rose-gold); }
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float {
+  position: fixed; bottom: 28px; right: 28px;
+  z-index: 9999;
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.7rem;
+  box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.12); box-shadow: 0 10px 36px rgba(37,211,102,0.7); animation: none; }
+.wa-tooltip {
+  position: absolute; right: 74px; top: 50%;
+  transform: translateY(-50%);
+  background: white; border-radius: 10px; padding: 8px 14px;
+  box-shadow: var(--shadow-card);
+  font-size: 0.72rem; font-weight: 500;
+  color: var(--charcoal); white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s;
+}
+.wa-float:hover .wa-tooltip { opacity: 1; }
+@keyframes waPulse {
+  0%,100% { box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+  50% { box-shadow: 0 6px 48px rgba(37,211,102,0.8), 0 0 0 12px rgba(37,211,102,0.1); }
+}
+
+/* ── MOBILE NAV MENU ── */
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(253,248,242,0.98); backdrop-filter: blur(16px);
+  flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--charcoal); text-decoration: none; }
+.mobile-menu a:hover { color: var(--rose-gold-dark); }
+.mobile-close {
+  position: absolute; top: 24px; right: 24px;
+  background: var(--blush); border: none;
+  width: 44px; height: 44px; border-radius: 50%;
+  font-size: 1.2rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── FADE IN ── */
+.fade-up {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up-d1 { transition-delay: 0.1s; }
+.fade-up-d2 { transition-delay: 0.2s; }
+.fade-up-d3 { transition-delay: 0.3s; }
+.fade-up-d4 { transition-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-sub { margin: 0 auto 40px; }
+  .hero-stats { justify-content: center; }
+  .hero-ctas { justify-content: center; }
+  .hero-visual { display: none; }
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .bridal-inner { grid-template-columns: 1fr; }
+  .bridal-visual { display: none; }
+  .custom-inner { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .creds-inner { grid-template-columns: repeat(2, 1fr); }
+  .location-inner { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .trust-inner { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  nav { padding: 0 20px; }
+  .section-wrap { padding: 0 20px; }
+  .section-pad { padding: 70px 0; }
+  .hero { padding: 40px 20px; min-height: auto; }
+  .hero-title { font-size: 2.4rem; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .creds-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .footer-top { grid-template-columns: 1fr; }
+  .trust-inner { grid-template-columns: 1fr; }
+  .nl-form-wrap { flex-direction: column; border-radius: var(--radius); overflow: hidden; }
+  .nl-input { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+  .nl-btn { border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 14px; }
+  .appt-ctas { flex-direction: column; align-items: center; }
+  .wa-float { bottom: 20px; right: 20px; width: 54px; height: 54px; font-size: 1.5rem; }
+  .announcement-inner { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/919999999999?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20jewellery%20collection." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  💬
+  <span class="wa-tooltip">Chat with us!</span>
+</a>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#collections" onclick="closeMobileMenu()">Collections</a>
+  <a href="#products" onclick="closeMobileMenu()">New Arrivals</a>
+  <a href="#bridal" onclick="closeMobileMenu()">Bridal</a>
+  <a href="#custom" onclick="closeMobileMenu()">Custom Order</a>
+  <a href="#contact" onclick="closeMobileMenu()">Visit Us</a>
+  <a href="https://wa.me/919999999999" target="_blank" class="btn-rose" style="font-size:0.85rem;">💬 WhatsApp Us</a>
+</div>
+
+<!-- Announcement Bar -->
+<div class="announcement">
+  <div class="announcement-inner">
+    <span class="ann-item">✦ Free Shipping Above ₹3,000</span>
+    <span class="ann-item">✦ BIS Hallmarked 18K & 22K Gold</span>
+    <span class="ann-item">✦ Lifetime Exchange Programme</span>
+    <span class="ann-item">✦ Certified Natural Diamonds</span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">💎</div>
+      <div>
+        <div class="logo-text">Gift <span>Diamonds</span></div>
+        <div class="logo-sub">Fine Jewellery</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#products">New Arrivals</a></li>
+      <li><a href="#bridal">Bridal</a></li>
+      <li><a href="#custom">Custom Order</a></li>
+      <li><a href="#contact">Visit Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#appointment" class="nav-btn">📅 Book Appointment</a>
+      <button class="hamburger" onclick="openMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+  </div>
+  <div class="hero-inner section-wrap" style="max-width:1300px;width:100%;">
+    <div class="hero-text">
+      <div class="hero-badge">New Collection 2025</div>
+      <h1 class="hero-title">
+        Jewellery That<br>
+        <em>Celebrates</em><br>
+        <span class="highlight">Your Story</span>
+      </h1>
+      <p class="hero-sub">Handcrafted with devotion in India. Every piece at Gift Diamonds is designed for moments that last forever — from daily elegance to bridal magnificence.</p>
+      <div class="hero-ctas">
+        <a href="#collections" class="btn-rose">💎 Explore Collections</a>
+        <a href="https://wa.me/919999999999" target="_blank" class="btn-outline">💬 WhatsApp Enquiry</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-n">12K+</div>
+          <div class="stat-l">Happy Customers</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">1500+</div>
+          <div class="stat-l">Designs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">15 Yrs</div>
+          <div class="stat-l">Of Trust</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">4.9★</div>
+          <div class="stat-l">Google Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-float-badge">30% Off on Bridal Sets</div>
+      <div class="hero-card">
+        <div class="hero-card-img">💍</div>
+        <div class="hero-card-info">
+          <div class="hero-card-tag">✦ New Arrival · Bestseller</div>
+          <div class="hero-card-name">Celestial Solitaire Ring</div>
+          <div class="hero-card-price">
+            <div>
+              <span class="price-main">₹48,500</span>
+              <span class="price-old">₹62,000</span>
+            </div>
+            <button class="btn-cart" onclick="window.open('https://wa.me/919999999999?text=Hi!+I+am+interested+in+the+Celestial+Solitaire+Ring.')">Enquire</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span class="m-item">BIS Hallmarked <span class="m-dot">✦</span></span>
+    <span class="m-item">Natural Diamonds <span class="m-dot">💎</span></span>
+    <span class="m-item">18K & 22K Gold <span class="m-dot">✦</span></span>
+    <span class="m-item">Certified Gemstones <span class="m-dot">💎</span></span>
+    <span class="m-item">Free Engraving <span class="m-dot">✦</span></span>
+    <span class="m-item">Lifetime Exchange <span class="m-dot">💎</span></span>
+    <span class="m-item">Ships in 24 Hours <span class="m-dot">✦</span></span>
+    <span class="m-item">BIS Hallmarked <span class="m-dot">✦</span></span>
+    <span class="m-item">Natural Diamonds <span class="m-dot">💎</span></span>
+    <span class="m-item">18K & 22K Gold <span class="m-dot">✦</span></span>
+    <span class="m-item">Certified Gemstones <span class="m-dot">💎</span></span>
+    <span class="m-item">Free Engraving <span class="m-dot">✦</span></span>
+    <span class="m-item">Lifetime Exchange <span class="m-dot">💎</span></span>
+    <span class="m-item">Ships in 24 Hours <span class="m-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- Trust Bar -->
+<section class="trust-bar section-pad-sm">
+  <div class="section-wrap">
+    <div class="trust-inner fade-up">
+      <div class="trust-item">
+        <div class="trust-icon">🏅</div>
+        <div class="trust-title">BIS Hallmarked</div>
+        <div class="trust-sub">All jewellery certified by Bureau of Indian Standards for purity assurance</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔄</div>
+        <div class="trust-title">Lifetime Exchange</div>
+        <div class="trust-sub">Exchange your jewellery at full market value, anytime, forever</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🚚</div>
+        <div class="trust-title">Free Shipping</div>
+        <div class="trust-sub">Insured doorstep delivery across India on all orders above ₹3,000</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-title">Secure Purchase</div>
+        <div class="trust-sub">100% safe payments · 15-day returns · Authentic certificates included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Collections / Categories -->
+<section class="categories section-pad" id="collections">
+  <div class="section-wrap">
+    <div class="text-center fade-up">
+      <div class="section-eyebrow">Curated For You</div>
+      <h2 class="section-title">Shop By <em>Category</em></h2>
+      <p class="section-desc">Crafted for timeless elegance — discover our finest collections for every occasion and every love story.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card cat1 fade-up fade-up-d1">
+        <div class="cat-img" style="font-size:4.5rem;">💍</div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <div class="cat-name">Rings</div>
+          <div class="cat-count">320+ Designs</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card cat2 fade-up fade-up-d2">
+        <div class="cat-img">📿</div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <div class="cat-name">Necklaces</div>
+          <div class="cat-count">280+ Designs</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card cat3 fade-up fade-up-d3">
+        <div class="cat-img">✨</div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <div class="cat-name">Earrings</div>
+          <div class="cat-count">420+ Designs</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card cat4 fade-up fade-up-d4">
+        <div class="cat-img">⭐</div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <div class="cat-name">Bracelets</div>
+          <div class="cat-count">190+ Designs</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card cat5 fade-up">
+        <div class="cat-img">💛</div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <div class="cat-name">Mangalsutras</div>
+          <div class="cat-count">150+ Designs</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="products-bg section-pad" id="products">
+  <div class="section-wrap">
+    <div class="text-center fade-up">
+      <div class="section-eyebrow">Just Arrived</div>
+      <h2 class="section-title">New <em>Arrivals</em></h2>
+      <p class="section-desc">Designed for moments that last forever. Each piece handcrafted with devotion.</p>
+    </div>
+    <div class="products-tabs fade-up">
+      <button class="tab-btn active">All</button>
+      <button class="tab-btn">Rings</button>
+      <button class="tab-btn">Necklaces</button>
+      <button class="tab-btn">Bridal</button>
+      <button class="tab-btn">Daily Wear</button>
+      <button class="tab-btn">Custom</button>
+    </div>
+    <div class="products-grid fade-up">
+      <div class="p-card">
+        <div class="p-img pi1">
+          💍
+          <div class="p-badge badge-new">New</div>
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">18K Gold · 0.5ct Diamond</div>
+          <div class="p-name">Celestial Solitaire Ring</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹48,500</span><span class="p-old">₹62,000</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Celestial+Solitaire+Ring')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi2">
+          📿
+          <div class="p-badge badge-best">Bestseller</div>
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">22K Gold · Natural Diamonds</div>
+          <div class="p-name">Lumière Diamond Necklace</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹72,000</span><span class="p-old">₹88,000</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Lumiere+Diamond+Necklace')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi3">
+          ✨
+          <div class="p-badge badge-sale">30% Off</div>
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">18K Rose Gold · Ruby</div>
+          <div class="p-name">Aurora Drop Earrings</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹34,200</span><span class="p-old">₹48,900</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Aurora+Drop+Earrings')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi4">
+          💛
+          <div class="p-badge badge-new">New</div>
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">22K Gold · Diamond</div>
+          <div class="p-name">Heritage Mangalsutra</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹38,000</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Heritage+Mangalsutra')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi5">
+          💎
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">18K Gold · Lab Diamonds</div>
+          <div class="p-name">Infinity Tennis Bracelet</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹56,000</span><span class="p-old">₹80,000</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Infinity+Tennis+Bracelet')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi6">
+          🌸
+          <div class="p-badge badge-best">Loved</div>
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">18K Gold · Emerald</div>
+          <div class="p-name">Garden Floral Pendant</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹29,500</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Garden+Floral+Pendant')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi7">
+          ⚜️
+          <div class="p-badge badge-sale">New</div>
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">22K Gold · Polki</div>
+          <div class="p-name">Royal Jhumka Earrings</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹42,800</span><span class="p-old">₹55,000</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Royal+Jhumka+Earrings')">Enquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-img pi8">
+          🌟
+          <button class="p-wish">♡</button>
+        </div>
+        <div class="p-info">
+          <div class="p-mat">18K Gold · Sapphire</div>
+          <div class="p-name">Starlight Cocktail Ring</div>
+          <div class="p-price-row">
+            <div><span class="p-price">₹67,000</span></div>
+            <button class="p-enquire" onclick="window.open('https://wa.me/919999999999?text=Hi!+Interested+in+Starlight+Cocktail+Ring')">Enquire</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:48px;">
+      <a href="https://wa.me/919999999999?text=Hi!+Please+share+your+full+jewellery+catalogue." target="_blank" class="btn-rose">View Full Collection 💎</a>
+    </div>
+  </div>
+</section>
+
+<!-- Bridal Section -->
+<section class="bridal-section section-pad" id="bridal">
+  <div class="section-wrap">
+    <div class="bridal-inner">
+      <div class="bridal-visual">
+        <div class="bridal-ring-bg">💍
+          <div class="bridal-mini-card bc1">
+            <div class="bmc-icon">✨</div>
+            <div class="bmc-label">Premium Sets</div>
+            <div class="bmc-val">From ₹1.2L</div>
+          </div>
+          <div class="bridal-mini-card bc2">
+            <div class="bmc-icon">🔴</div>
+            <div class="bmc-label">Ruby Collection</div>
+            <div class="bmc-val">240+ Designs</div>
+          </div>
+        </div>
+      </div>
+      <div class="bridal-text fade-up">
+        <div class="section-eyebrow">Bridal Collection</div>
+        <h2 class="section-title">Your Perfect<br><em>Bridal Set</em></h2>
+        <p style="font-size:0.88rem;color:var(--soft-grey);line-height:1.9;margin-top:12px;">Every bride deserves jewellery that tells her unique story. Our bridal collection is crafted with exceptional attention to detail, using only the finest gold and certified diamonds.</p>
+        <ul class="bridal-list">
+          <li>Complete Bridal Sets — Necklace, Earrings & Maang Tikka</li>
+          <li>Custom bridal jewellery designed just for you</li>
+          <li>22K & 18K gold with BIS hallmark certification</li>
+          <li>Free jewellery box & premium packaging</li>
+          <li>Book a private bridal consultation at our store</li>
+        </ul>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="#appointment" class="btn-rose">📅 Book Bridal Consultation</a>
+          <a href="https://wa.me/919999999999?text=Hi!+I+want+to+know+about+your+Bridal+Collection." target="_blank" class="btn-outline">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testi-section section-pad">
+  <div class="section-wrap">
+    <div class="text-center fade-up">
+      <div class="section-eyebrow">What They Say</div>
+      <h2 class="section-title">Loved by <em>Thousands</em></h2>
+      <p class="section-desc">Real stories from our cherished customers across India.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card fade-up fade-up-d1">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">The craftsmanship is extraordinary. My engagement ring is simply perfect — the way light plays through the diamond is breathtaking. I receive compliments everywhere I go!</p>
+        <div class="t-author">
+          <div class="t-avatar">P</div>
+          <div>
+            <div class="t-name">Priya Mehta</div>
+            <div class="t-loc">Mumbai</div>
+            <div class="t-verified">✓ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card fade-up fade-up-d2">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">I gifted my wife the bridal necklace set and she was in tears — happy ones! The packaging, the quality, the service — everything was world-class. Gift Diamonds is truly premium.</p>
+        <div class="t-author">
+          <div class="t-avatar">R</div>
+          <div>
+            <div class="t-name">Rahul Sharma</div>
+            <div class="t-loc">New Delhi</div>
+            <div class="t-verified">✓ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card fade-up fade-up-d3">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">My custom mangalsutra was designed exactly how I imagined. The team understood my vision perfectly. Traditional soul with a modern design — exactly what I wanted!</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div>
+            <div class="t-name">Ananya Kapoor</div>
+            <div class="t-loc">Bengaluru</div>
+            <div class="t-verified">✓ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Google Rating -->
+    <div class="text-center" style="margin-top:52px;">
+      <div style="display:inline-flex;align-items:center;gap:16px;background:white;padding:20px 40px;border-radius:50px;box-shadow:var(--shadow-card);">
+        <div style="font-size:2rem;">⭐</div>
+        <div>
+          <div style="font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--charcoal);line-height:1;">4.9 / 5</div>
+          <div style="font-size:0.68rem;font-weight:400;color:var(--soft-grey);letter-spacing:0.1em;text-transform:uppercase;">Google Rating · 1,200+ Reviews</div>
+        </div>
+        <div style="width:1px;height:40px;background:var(--blush);"></div>
+        <div style="font-size:1.5rem;">💎</div>
+        <div>
+          <div style="font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--charcoal);line-height:1;">Trusted</div>
+          <div style="font-size:0.68rem;font-weight:400;color:var(--soft-grey);letter-spacing:0.1em;text-transform:uppercase;">Since 2010 · 12,000+ Customers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Credentials -->
+<section class="creds-section section-pad">
+  <div class="section-wrap">
+    <div class="text-center fade-up">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2 class="section-title">Built on <em>Trust</em></h2>
+    </div>
+    <div class="creds-inner">
+      <div class="cred-card fade-up fade-up-d1">
+        <div class="cred-icon">🏅</div>
+        <div class="cred-title">BIS Hallmark Certified</div>
+        <div class="cred-desc">Every piece carries the Bureau of Indian Standards hallmark, guaranteeing gold purity you can trust completely.</div>
+        <div class="cred-badge">Govt. Certified</div>
+      </div>
+      <div class="cred-card fade-up fade-up-d2">
+        <div class="cred-icon">💎</div>
+        <div class="cred-title">GIA Certified Diamonds</div>
+        <div class="cred-desc">All our diamonds come with GIA or IGI certification — grading report included with every diamond purchase.</div>
+        <div class="cred-badge">Internationally Certified</div>
+      </div>
+      <div class="cred-card fade-up fade-up-d3">
+        <div class="cred-icon">🤝</div>
+        <div class="cred-title">Trusted Since 2010</div>
+        <div class="cred-desc">Over 15 years of serving families across India. Over 12,000 happy customers and counting, with 4.9★ Google rating.</div>
+        <div class="cred-badge">15 Years of Legacy</div>
+      </div>
+      <div class="cred-card fade-up fade-up-d4">
+        <div class="cred-icon">🔒</div>
+        <div class="cred-title">Secure & Safe</div>
+        <div class="cred-desc">100% secure payment gateway. Insured shipping. 15-day easy returns. Your trust is our highest priority.</div>
+        <div class="cred-badge">100% Safe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Order / Enquiry Form -->
+<section class="custom-section section-pad" id="custom">
+  <div class="section-wrap">
+    <div class="custom-inner">
+      <div class="custom-info fade-up">
+        <div class="section-eyebrow">Custom Order</div>
+        <h2 class="section-title">Design Your<br><em>Dream Piece</em></h2>
+        <p style="font-size:0.88rem;color:var(--soft-grey);line-height:1.9;margin-top:12px;margin-bottom:8px;">At Gift Diamonds, every dream jewellery piece is possible. Share your vision and our master craftsmen will bring it to life — exactly as you imagined.</p>
+        <div class="custom-steps">
+          <div class="custom-step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Share Your Vision</h4>
+              <p>Tell us about your dream design — style, metal, gemstones and budget. We listen carefully.</p>
+            </div>
+          </div>
+          <div class="custom-step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>3D Design Preview</h4>
+              <p>Our designers create a 3D preview of your jewellery so you can see it before it's crafted.</p>
+            </div>
+          </div>
+          <div class="custom-step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Crafted with Precision</h4>
+              <p>Our master artisans handcraft your piece with exceptional attention to every detail.</p>
+            </div>
+          </div>
+          <div class="custom-step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Delivered to You</h4>
+              <p>Insured, premium-packed delivery — or pick up in store with your BIS certificate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up fade-up-d2">
+        <div class="custom-form-wrap">
+          <h3>Request a Custom Order</h3>
+          <p>Fill in your details and we'll get back to you within 24 hours.</p>
+          <div class="form-row">
+            <input type="text" class="form-input" placeholder="Your Full Name" required>
+            <input type="tel" class="form-input" placeholder="Mobile Number" required>
+          </div>
+          <div class="form-row">
+            <select class="form-select">
+              <option value="">Jewellery Type</option>
+              <option>Ring</option>
+              <option>Necklace</option>
+              <option>Earrings</option>
+              <option>Bracelet</option>
+              <option>Mangalsutra</option>
+              <option>Bridal Set</option>
+              <option>Other</option>
+            </select>
+            <select class="form-select">
+              <option value="">Budget Range</option>
+              <option>Under ₹25,000</option>
+              <option>₹25,000 – ₹50,000</option>
+              <option>₹50,000 – ₹1,00,000</option>
+              <option>₹1,00,000 – ₹3,00,000</option>
+              <option>Above ₹3,00,000</option>
+            </select>
+          </div>
+          <div class="form-full">
+            <input type="email" class="form-input" placeholder="Email Address (Optional)">
+          </div>
+          <textarea class="form-textarea" placeholder="Describe your dream jewellery — design inspiration, occasion, metal preference, gemstones..."></textarea>
+          <button class="btn-submit" onclick="handleCustomOrder()">💬 Send Enquiry via WhatsApp</button>
+          <p style="font-size:0.68rem;color:var(--soft-grey);text-align:center;margin-top:12px;">Or call us directly: <strong style="color:var(--rose-gold-dark);">+91 99999 99999</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Book Appointment -->
+<section class="appt-section section-pad" id="appointment">
+  <div class="section-wrap">
+    <div class="appt-inner fade-up">
+      <div class="appt-icon">📅</div>
+      <div class="section-eyebrow" style="justify-content:center;">Private Experience</div>
+      <h2 class="section-title">Book a Personal <em>Appointment</em></h2>
+      <p class="section-desc">Experience our jewellery in a private, relaxed setting. Our jewellery experts will guide you through our collection over tea — no rush, no pressure.</p>
+      <div class="appt-ctas">
+        <a href="https://wa.me/919999999999?text=Hi!+I+would+like+to+book+an+appointment+at+your+store." target="_blank" class="btn-rose" style="font-size:0.82rem;">💬 Book via WhatsApp</a>
+        <a href="tel:+919999999999" class="btn-outline" style="font-size:0.82rem;">📞 Call Now</a>
+      </div>
+      <div style="margin-top:40px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">☕</div>
+          <div style="font-size:0.75rem;font-weight:500;color:var(--charcoal);">Complimentary Tea</div>
+          <div style="font-size:0.65rem;color:var(--soft-grey);">Relaxed atmosphere</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">👩‍💼</div>
+          <div style="font-size:0.75rem;font-weight:500;color:var(--charcoal);">Personal Stylist</div>
+          <div style="font-size:0.65rem;color:var(--soft-grey);">One-on-one guidance</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">💎</div>
+          <div style="font-size:0.75rem;font-weight:500;color:var(--charcoal);">Full Collection Access</div>
+          <div style="font-size:0.65rem;color:var(--soft-grey);">Try before you buy</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🎁</div>
+          <div style="font-size:0.75rem;font-weight:500;color:var(--charcoal);">Gift Wrapping</div>
+          <div style="font-size:0.65rem;color:var(--soft-grey);">Complimentary</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Store Location -->
+<section class="location-section section-pad" id="contact">
+  <div class="section-wrap">
+    <div class="text-center fade-up" style="margin-bottom:52px;">
+      <div class="section-eyebrow">Find Us</div>
+      <h2 class="section-title">Visit Our <em>Store</em></h2>
+    </div>
+    <div class="location-inner fade-up">
+      <div class="map-placeholder">
+        <div class="map-icon">📍</div>
+        <p><strong>Gift Diamonds Fine Jewellery</strong><br>Your Store Address, City, State — 400001</p>
+        <a href="https://maps.google.com" target="_blank">📌 Open in Google Maps</a>
+      </div>
+      <div class="location-info">
+        <h3>Gift Diamonds</h3>
+        <div class="l-row">
+          <div class="l-icon">📍</div>
+          <div>
+            <div class="l-label">Address</div>
+            <div class="l-val">Shop No. 12, Jewellery Market<br>Your City, State — 400001<br>Near [Landmark]</div>
+          </div>
+        </div>
+        <div class="l-row">
+          <div class="l-icon">📞</div>
+          <div>
+            <div class="l-label">Phone</div>
+            <div class="l-val"><a href="tel:+919999999999" style="color:var(--rose-gold-dark);text-decoration:none;">+91 99999 99999</a></div>
+          </div>
+        </div>
+        <div class="l-row">
+          <div class="l-icon">📧</div>
+          <div>
+            <div class="l-label">Email</div>
+            <div class="l-val"><a href="mailto:hello@giftdiamonds.in" style="color:var(--rose-gold-dark);text-decoration:none;">hello@giftdiamonds.in</a></div>
+          </div>
+        </div>
+        <div class="hours-grid">
+          <div class="hours-title">⏰ Store Hours</div>
+          <div class="hour-row"><span class="day">Monday – Saturday</span><span class="time">10:00 AM – 8:00 PM</span></div>
+          <div class="hour-row"><span class="day">Sunday</span><span class="time">11:00 AM – 6:00 PM</span></div>
+          <div class="hour-row"><span class="day">Festivals</span><span class="time">Special Extended Hours</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="nl-section">
+  <div class="section-wrap" style="position:relative;z-index:2;">
+    <h2>Get Early Access to <em>New Collections</em></h2>
+    <p>Join 10,000+ jewellery lovers for exclusive drops, styling tips & special offers.</p>
+    <div class="nl-form-wrap">
+      <input type="email" class="nl-input" placeholder="Enter your email address">
+      <button class="nl-btn">Subscribe ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:16px;">
+          <div class="logo-icon">💎</div>
+          <div>
+            <div class="logo-text footer-brand">Gift <span>Diamonds</span></div>
+            <div class="logo-sub">Fine Jewellery</div>
+          </div>
+        </div>
+        <p class="footer-tagline">Crafted for timeless elegance. Jewellery that celebrates your story and is designed for moments that last forever. Trusted since 2010.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">yt</a>
+          <a href="https://wa.me/919999999999" class="social-link" target="_blank">wa</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="#">Diamond Rings</a></li>
+          <li><a href="#">Gold Necklaces</a></li>
+          <li><a href="#">Earrings</a></li>
+          <li><a href="#">Bracelets</a></li>
+          <li><a href="#">Mangalsutras</a></li>
+          <li><a href="#">Bridal Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns & Exchange</a></li>
+          <li><a href="#">Jewellery Care Guide</a></li>
+          <li><a href="#">Ring Sizing Guide</a></li>
+          <li><a href="#">Certificate Verification</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">BIS Hallmark</a></li>
+          <li><a href="#">Press & Media</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Gift Diamonds Fine Jewellery. All rights reserved. | Made with 💎 in India</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu
+function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+
+// Scroll fade-in
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Tab buttons
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// Wishlist heart toggle
+document.querySelectorAll('.p-wish').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.textContent = this.textContent === '♡' ? '♥' : '♡';
+    this.style.color = this.textContent === '♥' ? '#e05a6a' : '';
+  });
+});
+
+// Custom Order WhatsApp
+function handleCustomOrder() {
+  const name = document.querySelector('.custom-form-wrap input[placeholder="Your Full Name"]').value || 'Customer';
+  const type = document.querySelector('.custom-form-wrap select').value || 'Jewellery';
+  const desc = document.querySelector('.form-textarea').value || '';
+  const msg = `Hi Gift Diamonds! I am ${name} and I am interested in a custom ${type}. ${desc}`;
+  window.open('https://wa.me/919999999999?text=' + encodeURIComponent(msg), '_blank');
+}
+
+// Smooth counter animation for hero stats
+function animateNum(el, target, suffix) {
+  let start = 0;
+  const step = target / 50;
+  const timer = setInterval(() => {
+    start += step;
+    if(start >= target) { el.textContent = target + suffix; clearInterval(timer); return; }
+    el.textContent = Math.floor(start) + suffix;
+  }, 30);
+}
+const statNums = document.querySelectorAll('.stat-n');
+const vals = [12, 1500, 15, 4.9];
+const suffixes = ['K+', '+', ' Yrs', '★'];
+setTimeout(() => {
+  statNums.forEach((el, i) => {
+    if(i < 3) animateNum(el, vals[i], suffixes[i]);
+  });
+}, 600);
+</script>
+</body>
+</html>
